@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="debb1d8d-2286-4137-8ba7-c2f1a815dcea" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shcolarship/LibClass/ListOfStudents.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shcolarship/LibClass/ListOfStudents.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shcolarship/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shcolarship/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibClass/ListOfStudents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibClass/ListOfStudents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../~$laba4.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../~WRL0379.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../~$lab1.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +43,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "refactor__branch",
+    "git-widget-placeholder": "graphicAppRep",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "F:/2курс/сем2/Java_ТРПО/laba1/Shcolarship/src/Main.java"
   }

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ListOfStudents extends Student
 {
-    private ArrayList<Student> studentsArrayList;
+    private  final ArrayList<Student> studentsArrayList;
 
     public ListOfStudents(ArrayList<Student> StudentsArrayList)
     {
@@ -16,18 +16,22 @@ public class ListOfStudents extends Student
                     students.GetFormOfEducation(), students.GetMark()));
         }
     }
-    public void GetStudentsList()
+    public String GetStudentsList()
     {
-        System.out.println("Список студентов:");
+        StringBuilder result = new StringBuilder("Список студентов:\n");
         for(Student student : studentsArrayList)
         {
-            System.out.printf("%s %s %.1f\n",student.GetName(),student.GetFormOfEducation().toString(),
+            String format = String.format("%s %s %.1f\n", student.GetName(), student.GetFormOfEducation().toString(),
                     student.GetMark());
+
+            result.append(format);
         }
+        return result.toString();
     }
-   public void GetInfoOfScholarship()
+   public String GetInfoOfScholarship()
     {
         float scholarShip = 109.2F;
+        StringBuilder result = new StringBuilder();
         for(Student students : studentsArrayList)
         {
             if(students.GetFormOfEducation() == FormOfEducation.Budget)
@@ -37,52 +41,57 @@ public class ListOfStudents extends Student
                     case 1:
                     case 2:
                     case 3:
-                        System.out.printf("Студент %s не получает" +
-                                " стипендию.\n", students.GetName());
+                        result.append(String.format("Студент %s не получает" +
+                                " стипендию.\n", students.GetName()));
                         break;
                     case 4:
                     case 5:
-                        System.out.printf("Студент %s получает" +
-                                " минимальную стипендию: %f\n", students.GetName(), scholarShip);
+                        result.append(String.format("Студент %s получает" +
+                                " минимальную стипендию: %f\n", students.GetName(), scholarShip));
                         break;
                     case 6:
                     case 7:
                         scholarShip = scholarShip + scholarShip * 25 / 100;
-                        System.out.printf("Студент %s получает" +
-                                " первую повышенную стипендию: %f\n", students.GetName(), scholarShip);
+                        result.append(String.format("Студент %s получает" +
+                                " первую повышенную стипендию: %f\n", students.GetName(), scholarShip));
                         break;
                     case 8:
                     case 9:
                     case 10:
                         scholarShip = scholarShip + scholarShip * 50 / 100;
-                        System.out.printf("Студент %s получает" +
-                                " вторую повышенную стипендию: %f\n", students.GetName(), scholarShip);
+                        result.append(String.format("Студент %s получает" +
+                                " вторую повышенную стипендию: %f\n", students.GetName(), scholarShip));
                         break;
                     default:
-                        return;
+                        result.append(String.format("Студент %s не получает" +
+                                " стипендию.\n", students.GetName()));
+                        break;
                 }
             }
             else
             {
-                System.out.printf("Студент %s не получает" +
-                        " стипендию.\n", students.GetName());
+                result.append(String.format("Студент %s не получает" +
+                        " стипендию.\n", students.GetName()));
             }
         }
+        return result.toString();
     }
 
-    public void GetInfoPaidStudents()
+    public String GetInfoPaidStudents()
     {
+        StringBuilder result = new StringBuilder();
         for(Student students : studentsArrayList)
         {
             if(students.GetFormOfEducation() == FormOfEducation.Paid)
             {
-                System.out.printf("Студент %s обучается" +
-                        " на платной основе\n", students.GetName());
+                result.append(String.format("Студент %s обучается" +
+                        " на платной основе\n", students.GetName()));
             }
         }
+        return result.toString();
     }
 
-    public void GetAverageSessionMark()
+    public String GetAverageSessionMark()
     {
         int index = 0;
         float averageMark = 0;
@@ -91,7 +100,7 @@ public class ListOfStudents extends Student
             index++;
             averageMark += students.GetMark();
         }
-        System.out.printf("Средняя оценка за прошедшую" +
-                " сессию: %.1f\n",averageMark = averageMark / index);
+        return String.format("Средняя оценка за сессию: %.1f \n", averageMark / index);
+
     }
 }
